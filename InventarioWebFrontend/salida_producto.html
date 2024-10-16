@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salida Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <h1>Registrar Salida de Producto</h1>
+    <form id="formSalida">
+        <label>Nombre Producto Salida:</label>
+        <select id="nomProductoSalida">
+            <option value="">Seleccione un producto</option>
+        </select><br>
+        <label>Unidades Inventario:</label>
+        <input type="number" id="unidadesInventario" readonly><br>
+        <label>Unidades Salida:</label>
+        <input type="number" id="unidadesSalida"><br>
+        <label>Tipo Movimiento:</label>
+        <select id="tipoMovimiento">
+            <option value="Salida">Salida</option>
+        </select><br>
+        <button type="button" id="registroSalida">Registrar Salida</button>
+
+    </form>
+    <button onclick="location.href='stock.html'" class="btn btn-primary">Actualizar STOCK</button>
+    <button onclick="location.href='menu_principal.html'" class="btn btn-info">Menu principal</button>
+    <button onclick="location.href='entrada_producto.html'"class="btn btn-warning">Entrada producto</button>
+
+    <div class="col mt-5">
+        <h3 class="text-center">Lista productos de salida</h3>
+        <table class="table table-bordered" id="salidaProductoTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Producto Salida</th>
+                    <th>Unidades Inventario</th>
+                    <th>Unidades Salida</th>
+                    <th>Tipo Movimiento</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="btnActualizar" class="btn btn-primary">Actualizar</button>
+       
+    </div>
+    <script src="./js/salida_producto.js"></script>
+</body>
+
+</html>
